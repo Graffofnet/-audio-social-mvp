@@ -36,3 +36,5 @@
 1. Склонируй репозиторий:
    ```bash
    git clone https://github.com/ТВОЙ_НИК/название-репо.git
+   cd название-репо
+   npx serve .
