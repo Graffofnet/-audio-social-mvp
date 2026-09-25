@@ -1,0 +1,30 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #1a1a2e;
+    color: #eee;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: #e94560;
+    color: white;
+}
+
+button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+audio {
+    width: 100%;
+    margin-top: 20px;
+}
