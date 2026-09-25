@@ -1,3 +1,28 @@
+// Подключение к Supabase
+const SUPABASE_URL = 'https://nhdushhpqmtbzmgjyqoe.supabase.co';
+const SUPABASE_KEY = 'sb_publishable_JVD0JSEr8TmWWu5eglHzKQ_394cuN1P';
+
+let supabase = null;
+
+// Загружаем библиотеку Supabase
+async function loadSupabase() {
+    if (typeof window.supabase === 'undefined') {
+        await new Promise((resolve, reject) => {
+            const script = document.createElement('script');
+            script.src = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2';
+            script.onload = resolve;
+            script.onerror = reject;
+            document.head.appendChild(script);
+        });
+    }
+    supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+}
+
+// Вызываем загрузку при старте
+loadSupabase().then(() => {
+    console.log('Supabase подключен!');
+    // Дальше будем добавлять функции
+});
 // app.js
 const recordBtn = document.getElementById('recordBtn');
 const stopBtn = document.getElementById('stopBtn');
